@@ -6,7 +6,6 @@
 
   html,
   body {
-    font-family: 'Roboto', sans-serif;
     font-size: 15px;
     line-height: 1.3;
   }
@@ -22,6 +21,26 @@
     -webkit-box-sizing: inherit;
     -moz-box-sizing: inherit;
     box-sizing: inherit;
+  }
+
+  @font-face {
+    font-family: AmilTypeFace-Light;
+    src: url(./fonts/AmilTypeFace-Light_WebOnly.woff);
+  }
+  @font-face {
+    font-family: AmilTypeFace-Medium;
+    src: url(./fonts/AmilTypeFace-Medium_WebOnly.woff);
+  }
+  @font-face {
+    font-family: AmilTypeFace-Bold;
+    src: url(./fonts/AmilTypeFace-Bold_WebOnly.woff);
+  }
+
+  .header-top {
+    height: 160px;
+    display: flex;
+    align-items: flex-end;
+    margin-left: 50vw;
   }
 
   .header-image-container {
@@ -45,10 +64,7 @@
   }
 
   .header-logo {
-    position: absolute;
-    width: 120px;
-    right: 10px;
-    top: 10px;
+    width: 185px;
     object-fit: fill;
   }
 
@@ -58,21 +74,16 @@
     height: 100%;
     transform: scale(1);
     opacity: 1;
-    background: url(./amil.jpg);
+    background: url(./imagem_topo_mae_2.jpg);
     background-repeat: no-repeat;
-    background-position: right;
     background-size: cover;
+    background-position: center;
     border-radius: 100%;
     transition: 0.4s ease-in-out;
   }
 
   .header-image.img-2 {
-    background: url(./teste.jpg);
-    background-size: cover;
-    background-position: center;
-  }
-  .header-image.img-3 {
-    background: url(./kek.jpg);
+    background: url(./imagem_topo_mae.jpg);
     background-size: cover;
     background-position: center;
   }
@@ -96,54 +107,52 @@
   }
 
   .header-detail.rotate {
-    transition: 0.5s ease-in-out;
+    transition: 0.4s ease-in-out;
     transform: rotate(330deg);
   }
 
   @media screen and (min-width: 520px) {
     .header-image-container {
-      width: 50vw;
-      height: 50vw;
-      left: -15vw;
-      top: -5vw;
+      width: 70vw;
+      height: 70vw;
+      left: -25vw;
+      top: -8vw;
     }
 
     .header-detail {
-      border-bottom: 5vw solid rgba(45, 186, 255, 0.9);
-      border-right: 5vw solid transparent;
-      border-top: 5vw solid transparent;
-      border-left: 5vw solid rgba(45, 186, 255, 0.9);
+      border-bottom: 7vw solid rgba(45, 186, 255, 0.9);
+      border-right: 7vw solid transparent;
+      border-top: 7vw solid transparent;
+      border-left: 7vw solid rgba(45, 186, 255, 0.9);
     }
   }
 
   .container {
-    margin-top: 75vw;
     padding-left: 13vw;
     padding-right: 13vw;
   }
 
   @media screen and (min-width: 520px) {
     .container {
-      margin-top: 100px;
-      margin-left: 45vw;
+      margin-left: 50vw;
       padding: 0px;
-      width: 400px;
+      max-width: 600px;
     }
   }
 
   .slider-bar {
     width: 100%;
-    height: 2px;
-    background-color: #d6d6d6;
-    box-shadow: 1px 1px 3px 0px rgba(214, 214, 214, 0.4);
+    height: 3px;
+    background-color: rgb(227, 224, 224);
+    box-shadow: 1px 1px 3px 0px rgba(227, 224, 224, 0.3);
     margin-bottom: 15px;
   }
 
   .slider-bar-progress {
     width: 0px;
-    height: 2px;
-    background-color: #471bff;
-    box-shadow: 1px 1px 2px 0px rgba(71, 27, 255, 0.4);
+    height: 3px;
+    background-color: rgb(0, 216, 150);
+    box-shadow: 1px 1px 2px 0px rgba(0, 216, 150, 0.3);
   }
 
   .slider-bar-progress.progressing {
@@ -152,23 +161,27 @@
   }
 
   .description {
-    color: #00d896;
-    max-width: 214px;
+    color: #4746ff;
     position: absolute;
     transition: 0.4s ease-in-out;
   }
 
   .description > h1 {
-    font-size: 2em;
+    font-size: 5em;
+    line-height: 0.75;
+    font-family: AmilTypeFace-Light;
+    font-weight: 300;
   }
 
   .description > p {
-    font-size: 1.3em;
+    color: #b4b4b4;
+    font-size: 2.6875em;
     margin: 15px 0px;
     font-weight: normal;
   }
 
   .description.hidden {
+    visibility: hidden;
     transition: 0s;
     transform: translateX(25px);
     opacity: 0;
@@ -196,26 +209,23 @@
       integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
       crossorigin="anonymous"
     ></script>
-    <style>
-      @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
-    </style>
   </head>
   <body>
-    <header>
-      <div class="header-image-container">
-        <div id="slider" class="header-slider">
-          <div id="slide_0" class="header-image"></div>
-          <div id="slide_1" class="header-image hidden img-2"></div>
-          <div id="slide_2" class="header-image hidden img-3"></div>
-        </div>
-        <div id="header-detail" class="header-detail"></div>
-      </div>
+    <header class="header-top">
       <img class="header-logo" src="./amil-dental.png" />
     </header>
 
+    <div class="header-image-container">
+      <div id="slider" class="header-slider">
+        <div id="slide_0" class="header-image"></div>
+        <div id="slide_1" class="header-image hidden img-2"></div>
+      </div>
+      <div id="header-detail" class="header-detail"></div>
+    </div>
+
     <div class="container">
       <section>
-        <div style="height: 200px; position: relative;">
+        <div style="height: 400px; position: relative;">
           <div id="slide-description_0" class="description">
             <h1>Planos Amil Dental</h1>
             <p>
@@ -225,30 +235,29 @@
           <div id="slide-description_1" class="description hidden">
             <h1>Procedimentos extras</h1>
             <p>
-              Incluindo documentação ortôdontica, básica e instação de aparelho
-            </p>
-          </div>
-          <div id="slide-description_2" class="description hidden">
-            <h1>Contratação totalmente</h1>
-            <p>
-              Rápida e sem burocracia
+              Incluindo documentação ortodôntica, básica e instação de aparelho
+              fixo
             </p>
           </div>
         </div>
         <div
           style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px;"
         >
-          <p style="color: #d6d6d6; padding-left: 5px; margin: 0px">
-            Ver todas as vantagens
+          <p style="color: rgb(0, 216, 150); margin: 0px; font-size: 2.1em;">
+            Contratação totalmente online
           </p>
           <div
-            style="width: 15px; height: 15px; border-bottom: 3px solid #471bff; border-right: 3px solid #471bff; transform: rotate(-40deg);"
+            id="next-slide"
+            style="width: 20px; height: 20px; border-bottom: 4px solid rgb(0, 216, 150); border-right: 4px solid rgb(0, 216, 150); transform: rotate(-40deg);"
           ></div>
         </div>
+        <p style="color:#BBBBBB; font-size: 2.1em;">Veja todas as vantagens</p>
         <div class="slider-bar">
           <div id="slider-bar-progress" class="slider-bar-progress"></div>
         </div>
-        <button class="btn-subscribe">Contratar</button>
+        <button class="btn-subscribe">
+          Contratar
+        </button>
       </section>
     </div>
   </body>
@@ -258,13 +267,23 @@
   $(document).ready(function() {
     let currentSlide = 1;
     let totalSlides = document.getElementById('slider').children.length;
-    setInterval(() => {
+    $('#slider-bar-progress').addClass('progressing');
+    // setInterval(() => {
+    //   advanceSlide();
+    //   console.log('interval');
+    // }, 4000);
+
+    const advanceSlide = () => {
+      $('#slider-bar-progress').toggleClass('progressing');
       $(`#slide_${currentSlide}`).removeClass('hidden');
       $(`#slide-description_${currentSlide}`).removeClass('hidden');
       $(`#header-detail`).addClass('rotate');
       setTimeout(() => {
         $(`#header-detail`).removeClass('rotate');
-      }, 1000);
+      }, 550);
+      setTimeout(() => {
+        $('#slider-bar-progress').toggleClass('progressing');
+      }, 100);
       for (let i = 0; i < totalSlides; i++) {
         if (i !== currentSlide) {
           $(`#slide-description_${i}`).addClass('hidden');
@@ -276,14 +295,8 @@
       } else {
         currentSlide = 0;
       }
-    }, 4000);
+    };
 
-    $('#slider-bar-progress').addClass('progressing');
-    setInterval(() => {
-      $('#slider-bar-progress').toggleClass('progressing');
-      setTimeout(() => {
-        $('#slider-bar-progress').toggleClass('progressing');
-      }, 100);
-    }, 4000);
+    $('#next-slide').click(advanceSlide);
   });
 </script>
