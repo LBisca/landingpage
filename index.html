@@ -60,7 +60,6 @@
   }
 
   .header-top {
-    height: 160px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -89,8 +88,20 @@
   }
 
   .header-logo {
-    width: 185px;
+    width: 75px;
     object-fit: fill;
+  }
+
+  @media screen and (min-width: 1300px) {
+    .header-logo {
+      width: 120px;
+    }
+  }
+
+  @media screen and (min-width: 1600px) {
+    .header-logo {
+      width: 185px;
+    }
   }
 
   .header-select {
@@ -207,6 +218,10 @@
     overflow: hidden;
   }
 
+  .section-2 {
+    overflow: hidden;
+  }
+
   .slider-bar {
     width: 100%;
     height: 3px;
@@ -266,6 +281,7 @@
     font-family: AmilTypeFace-Bold;
     font-weight: bold;
     border-radius: 70px;
+    cursor: pointer;
   }
   .btn-subscribe:focus {
     outline: none;
@@ -282,6 +298,16 @@
   }
   .btn-description.bold {
     font-family: AmilTypeFace-Bold;
+  }
+  .btn-subscribe.small {
+    font-size: 1.875em;
+    font-family: AmilTypeFace-Bold;
+    width: 9.57em;
+    height: 2.24em;
+  }
+
+  .btn-subscribe.blue {
+    background-color: #00adff;
   }
 
   .company-person {
@@ -331,7 +357,19 @@
 
   .content-wrapper {
     margin: 0px auto;
-    max-width: 1300px;
+    max-width: 900px;
+  }
+
+  @media screen and (min-width: 1300px) {
+    .content-wrapper {
+      max-width: 1000px;
+    }
+  }
+
+  @media screen and (min-width: 1600px) {
+    .content-wrapper {
+      max-width: 1300px;
+    }
   }
 
   .content-wrapper.flex {
@@ -419,14 +457,42 @@
     margin-bottom: 80px;
   }
 
+  .carousel-holder {
+    margin: 85px 0px;
+    transition: 0.5s;
+    display: none;
+    transform: translateY(100px);
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .carousel-holder.active {
+    position: relative;
+    display: flex;
+    transform: translateY(0px);
+    visibility: visible;
+    pointer-events: unset;
+    opacity: 1;
+  }
+
   .carousel-menu {
     display: flex;
     justify-content: center;
     text-align: center;
     align-items: center;
-    color: #b4b4b4;
     font-family: AmilTypeFace-Medium;
     font-size: 2.6875em;
+  }
+
+  .carousel-menu p {
+    color: #b4b4b4;
+    transition: 0.4s color ease-in-out;
+    cursor: pointer;
+  }
+
+  .carousel-menu p.active {
+    color: #00adff;
   }
 
   .carousel-menu-pointer {
@@ -437,11 +503,124 @@
     margin: 0px 50px;
   }
 
+  #menu-holder {
+    position: relative;
+  }
+
   .carousel {
+    position: relative;
     background-color: #4746ff;
-    width: 100%;
+    color: #fff;
+    display: grid;
+    grid-gap: 85px;
+    margin: 0px auto;
+    width: 98%;
+    transition: 0.5s;
     border-radius: 18px;
+    grid-template-columns: [col1]35% [col2]auto;
     min-height: 300px;
+    opacity: 0.3;
+    z-index: 1;
+  }
+
+  .carousel.active {
+    opacity: 1;
+    z-index: 2;
+  }
+
+  .carousel.left {
+    position: absolute;
+    transform: translateX(calc(-100% - 1em)) scale(0.9);
+  }
+
+  .carousel.left.far {
+    transform: translateX(calc(-200% - 1em)) scale(0.9);
+  }
+
+  .carousel.right {
+    position: absolute;
+    transform: translateX(calc(100% + 2em)) scale(0.9);
+  }
+
+  .carousel.right.far {
+    transform: translateX(calc(200% + 1em)) scale(0.9);
+  }
+
+  .carousel_col1 {
+    padding-top: 85px;
+    padding-left: 105px;
+  }
+
+  .carousel_col1 h2 {
+    font-size: 4.375em;
+    font-family: AmilTypeFace-Bold;
+  }
+
+  .carousel_col1 h3 {
+    font-size: 3.125em;
+    font-family: AmilTypeFace-Regular;
+  }
+
+  .carousel_col2 {
+    padding-top: 55px;
+  }
+
+  .carousel_col2 ul {
+    font-size: 1.75em;
+    font-family: AmilTypeFace-Medium;
+    list-style: none;
+  }
+
+  .carousel_col2 li {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 10px;
+  }
+
+  .carousel_col2 li::before {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    content: ' ';
+    width: 22px;
+    height: 17px;
+    background: url(./assets/img/check-mark.svg) no-repeat;
+  }
+
+  .btn-navigate-carousel {
+    width: 10.7em;
+    height: 10.7em;
+    background-color: #00d896;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -6.85em;
+    top: calc(50% - 5.35em);
+    transition: 0.2s;
+    visibility: hidden;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  .btn-navigate-carousel.active {
+    visibility: visible;
+  }
+
+  .btn-navigate-carousel.previous {
+    left: -6.85em;
+    transform: rotate(180deg);
+  }
+
+  .btn-navigate-carousel svg {
+    width: 2.6em;
+    margin-left: 15px;
+  }
+
+  .btn-navigate-carousel.fade {
+    pointer-events: none;
+    opacity: 0;
   }
 </style>
 
@@ -538,15 +717,416 @@
           <!-- CARROSSEL -->
 
           <div class="carousel-menu">
-            <p>Linha Clássica</p>
+            <p id="menu_1" class="active">Linha Clássica</p>
             <div class="carousel-menu-pointer"></div>
-            <p>Linha Kids</p>
+            <p id="menu_2">Linha Kids</p>
             <div class="carousel-menu-pointer"></div>
-            <p>Linha Estética</p>
+            <p id="menu_3">Linha Estética</p>
           </div>
 
-          <div class="carousel-holder">
-            <div id="carousel_1" class="carousel"></div>
+          <div id="menu-holder">
+            <div id="carousel-holder_1" class="carousel-holder active">
+              <div class="carousel active carousel_1">
+                <div class="carousel_col1">
+                  <h2>Slide 1<br />200</h2>
+                  <br />
+                  <h3>
+                    A partir de R$<br />
+                    34,00/mês
+                  </h3>
+                </div>
+                <div class="carousel_col2">
+                  <ul>
+                    <li>Atendimento Nacional</li>
+                    <li>Consultas e diagnósticos</li>
+                    <li>Limpeza e aplicação de flúor</li>
+                    <li>Raio-X</li>
+                    <li>Restaurações</li>
+                    <li>Cirurgias</li>
+                    <li>Tratamento de gengivas e canal</li>
+                    <li>Documentação ortodôntica (Básica)</li>
+                  </ul>
+                  <div style="display: flex; margin: 25px 0px 60px; ">
+                    <button
+                      style="margin-right: 25px;"
+                      class="btn-subscribe small blue"
+                    >
+                      Saiba mais
+                    </button>
+
+                    <button class="btn-subscribe small">
+                      Contratar
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel right carousel_2">
+                <div class="carousel_col1">
+                  <h2>Dental<br />20 Kids</h2>
+                  <br />
+                  <h3>
+                    A partir de R$<br />
+                    34,00/mês
+                  </h3>
+                </div>
+                <div class="carousel_col2">
+                  <ul>
+                    <li>Atendimento Nacional</li>
+                    <li>Consultas e diagnósticos</li>
+                    <li>Limpeza e aplicação de flúor</li>
+                    <li>Raio-X</li>
+                    <li>Restaurações</li>
+                    <li>Cirurgias</li>
+                    <li>Tratamento de gengivas e canal</li>
+                    <li>Documentação ortodôntica (Básica)</li>
+                  </ul>
+                  <div style="display: flex; margin: 25px 0px 60px; ">
+                    <button
+                      style="margin-right: 25px;"
+                      class="btn-subscribe small blue"
+                    >
+                      Saiba mais
+                    </button>
+
+                    <button class="btn-subscribe small">
+                      Contratar
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel right far carousel_3">
+                <div class="carousel_col1">
+                  <h2>Dental<br />20 Kids</h2>
+                  <br />
+                  <h3>
+                    A partir de R$<br />
+                    34,00/mês
+                  </h3>
+                </div>
+                <div class="carousel_col2">
+                  <ul>
+                    <li>Atendimento Nacional</li>
+                    <li>Consultas e diagnósticos</li>
+                    <li>Limpeza e aplicação de flúor</li>
+                    <li>Raio-X</li>
+                    <li>Restaurações</li>
+                    <li>Cirurgias</li>
+                    <li>Tratamento de gengivas e canal</li>
+                    <li>Documentação ortodôntica (Básica)</li>
+                  </ul>
+                  <div style="display: flex; margin: 25px 0px 60px; ">
+                    <button
+                      style="margin-right: 25px;"
+                      class="btn-subscribe small blue"
+                    >
+                      Saiba mais
+                    </button>
+
+                    <button class="btn-subscribe small">
+                      Contratar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Menu Diferente -->
+
+            <div id="carousel-holder_2" class="carousel-holder">
+                <div class="carousel active carousel_1">
+                  <div class="carousel_col1">
+                    <h2>Slide 2<br />200</h2>
+                    <br />
+                    <h3>
+                      A partir de R$<br />
+                      34,00/mês
+                    </h3>
+                  </div>
+                  <div class="carousel_col2">
+                    <ul>
+                      <li>Atendimento Nacional</li>
+                      <li>Consultas e diagnósticos</li>
+                      <li>Limpeza e aplicação de flúor</li>
+                      <li>Raio-X</li>
+                      <li>Restaurações</li>
+                      <li>Cirurgias</li>
+                      <li>Tratamento de gengivas e canal</li>
+                      <li>Documentação ortodôntica (Básica)</li>
+                    </ul>
+                    <div style="display: flex; margin: 25px 0px 60px; ">
+                      <button
+                        style="margin-right: 25px;"
+                        class="btn-subscribe small blue"
+                      >
+                        Saiba mais
+                      </button>
+  
+                      <button class="btn-subscribe small">
+                        Contratar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="carousel right carousel_2">
+                  <div class="carousel_col1">
+                    <h2>Dental<br />20 Kids</h2>
+                    <br />
+                    <h3>
+                      A partir de R$<br />
+                      34,00/mês
+                    </h3>
+                  </div>
+                  <div class="carousel_col2">
+                    <ul>
+                      <li>Atendimento Nacional</li>
+                      <li>Consultas e diagnósticos</li>
+                      <li>Limpeza e aplicação de flúor</li>
+                      <li>Raio-X</li>
+                      <li>Restaurações</li>
+                      <li>Cirurgias</li>
+                      <li>Tratamento de gengivas e canal</li>
+                      <li>Documentação ortodôntica (Básica)</li>
+                    </ul>
+                    <div style="display: flex; margin: 25px 0px 60px; ">
+                      <button
+                        style="margin-right: 25px;"
+                        class="btn-subscribe small blue"
+                      >
+                        Saiba mais
+                      </button>
+  
+                      <button class="btn-subscribe small">
+                        Contratar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="carousel right far carousel_3">
+                  <div class="carousel_col1">
+                    <h2>Slide 3<br />20 Kids</h2>
+                    <br />
+                    <h3>
+                      A partir de R$<br />
+                      34,00/mês
+                    </h3>
+                  </div>
+                  <div class="carousel_col2">
+                    <ul>
+                      <li>Atendimento Nacional</li>
+                      <li>Consultas e diagnósticos</li>
+                      <li>Limpeza e aplicação de flúor</li>
+                      <li>Raio-X</li>
+                      <li>Restaurações</li>
+                      <li>Cirurgias</li>
+                      <li>Tratamento de gengivas e canal</li>
+                      <li>Documentação ortodôntica (Básica)</li>
+                    </ul>
+                    <div style="display: flex; margin: 25px 0px 60px; ">
+                      <button
+                        style="margin-right: 25px;"
+                        class="btn-subscribe small blue"
+                      >
+                        Saiba mais
+                      </button>
+  
+                      <button class="btn-subscribe small">
+                        Contratar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            <div id="carousel-holder_3" class="carousel-holder">
+              <div class="carousel active carousel_1">
+                <div class="carousel_col1">
+                  <h2>Slide 3<br />200</h2>
+                  <br />
+                  <h3>
+                    A partir de R$<br />
+                    34,00/mês
+                  </h3>
+                </div>
+                <div class="carousel_col2">
+                  <ul>
+                    <li>Atendimento Nacional</li>
+                    <li>Consultas e diagnósticos</li>
+                    <li>Limpeza e aplicação de flúor</li>
+                    <li>Raio-X</li>
+                    <li>Restaurações</li>
+                    <li>Cirurgias</li>
+                    <li>Tratamento de gengivas e canal</li>
+                    <li>Documentação ortodôntica (Básica)</li>
+                  </ul>
+                  <div style="display: flex; margin: 25px 0px 60px; ">
+                    <button
+                      style="margin-right: 25px;"
+                      class="btn-subscribe small blue"
+                    >
+                      Saiba mais
+                    </button>
+
+                    <button class="btn-subscribe small">
+                      Contratar
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel right carousel_2">
+                <div class="carousel_col1">
+                  <h2>Dental<br />20 Kids</h2>
+                  <br />
+                  <h3>
+                    A partir de R$<br />
+                    34,00/mês
+                  </h3>
+                </div>
+                <div class="carousel_col2">
+                  <ul>
+                    <li>Atendimento Nacional</li>
+                    <li>Consultas e diagnósticos</li>
+                    <li>Limpeza e aplicação de flúor</li>
+                    <li>Raio-X</li>
+                    <li>Restaurações</li>
+                    <li>Cirurgias</li>
+                    <li>Tratamento de gengivas e canal</li>
+                    <li>Documentação ortodôntica (Básica)</li>
+                  </ul>
+                  <div style="display: flex; margin: 25px 0px 60px; ">
+                    <button
+                      style="margin-right: 25px;"
+                      class="btn-subscribe small blue"
+                    >
+                      Saiba mais
+                    </button>
+
+                    <button class="btn-subscribe small">
+                      Contratar
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel right far carousel_3">
+                <div class="carousel_col1">
+                  <h2>Dental<br />20 Kids</h2>
+                  <br />
+                  <h3>
+                    A partir de R$<br />
+                    34,00/mês
+                  </h3>
+                </div>
+                <div class="carousel_col2">
+                  <ul>
+                    <li>Atendimento Nacional</li>
+                    <li>Consultas e diagnósticos</li>
+                    <li>Limpeza e aplicação de flúor</li>
+                    <li>Raio-X</li>
+                    <li>Restaurações</li>
+                    <li>Cirurgias</li>
+                    <li>Tratamento de gengivas e canal</li>
+                    <li>Documentação ortodôntica (Básica)</li>
+                  </ul>
+                  <div style="display: flex; margin: 25px 0px 60px; ">
+                    <button
+                      style="margin-right: 25px;"
+                      class="btn-subscribe small blue"
+                    >
+                      Saiba mais
+                    </button>
+
+                    <button class="btn-subscribe small">
+                      Contratar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="btn-navigate-carousel next active">
+              <svg viewBox="0 0 41.065 72.231">
+                <g
+                  id="Repeat_Grid_3"
+                  data-name="Repeat Grid 3"
+                  clip-path="url(#clip-path)"
+                >
+                  <g
+                    id="Group_72"
+                    data-name="Group 72"
+                    transform="translate(-1733.55 -1812.55)"
+                  >
+                    <line
+                      id="Line_14"
+                      data-name="Line 14"
+                      x2="31.166"
+                      y2="31.166"
+                      transform="translate(1738.5 1817.5)"
+                      fill="none"
+                      stroke="#fff"
+                      stroke-linecap="round"
+                      stroke-width="7"
+                    />
+                    <line
+                      id="Line_15"
+                      data-name="Line 15"
+                      y1="31.166"
+                      x2="31.166"
+                      transform="translate(1738.5 1848.666)"
+                      fill="none"
+                      stroke="#fff"
+                      stroke-linecap="round"
+                      stroke-width="7"
+                    />
+                  </g>
+                </g>
+              </svg>
+            </div>
+
+            <div class="btn-navigate-carousel previous">
+              <svg viewBox="0 0 41.065 72.231">
+                <g
+                  id="Repeat_Grid_3"
+                  data-name="Repeat Grid 3"
+                  clip-path="url(#clip-path)"
+                >
+                  <g
+                    id="Group_72"
+                    data-name="Group 72"
+                    transform="translate(-1733.55 -1812.55)"
+                  >
+                    <line
+                      id="Line_14"
+                      data-name="Line 14"
+                      x2="31.166"
+                      y2="31.166"
+                      transform="translate(1738.5 1817.5)"
+                      fill="none"
+                      stroke="#fff"
+                      stroke-linecap="round"
+                      stroke-width="7"
+                    />
+                    <line
+                      id="Line_15"
+                      data-name="Line 15"
+                      y1="31.166"
+                      x2="31.166"
+                      transform="translate(1738.5 1848.666)"
+                      fill="none"
+                      stroke="#fff"
+                      stroke-linecap="round"
+                      stroke-width="7"
+                    />
+                  </g>
+                </g>
+              </svg>
+            </div>
           </div>
 
           <!-- Carrossel end -->
@@ -756,6 +1336,7 @@
 
 <script>
   $(document).ready(function() {
+    //  Header Slider
     let currentSlide = 1;
     let totalSlides = document.getElementById('slider').children.length;
     $('#slider-bar-progress').addClass('progressing');
@@ -795,6 +1376,136 @@
       interval = setInterval(() => {
         advanceSlide();
       }, 4000);
+    });
+
+    // Carrossel
+    let currentMenu = 1;
+    let currentCarousel = 1;
+    let totalCarousels = $(`#carousel-holder_${currentMenu}`).children().length;
+
+    console.log(totalCarousels);
+
+    const changeMenu = menu => {
+      if (currentMenu !== menu + 1) {
+        $('.btn-navigate-carousel').toggleClass('fade');
+      setTimeout(() => {
+        $('.btn-navigate-carousel').toggleClass('fade');
+      }, 400);
+      }
+
+      currentMenu = menu + 1;
+      totalCarousels = $(`#carousel-holder_${currentMenu}`).children().length;
+      currentCarousel = 1;
+
+      $('#menu-holder')
+        .find('.carousel-holder')
+        .each((index, elm) => {
+          if (index !== menu) {
+            $(elm).removeClass('active');
+            $(elm).css('display', 'none')
+          } else {
+            $(elm).css('display', 'flex')
+            setTimeout(() => {
+              $(elm).addClass('active');
+            }, 100)
+          }
+          $(elm)
+            .find('.carousel')
+            .each((index, elm) => {
+              $(elm).removeClass('active right left far');
+              if (index === 0) {
+                $(elm).addClass('active');
+              }
+              if (index === 1) {
+                $(elm).addClass('right');
+              }
+
+              if (index > 1) {
+                $(elm).addClass('right far');
+              }
+            });
+        });
+
+      $('.carousel-menu')
+        .find('P')
+        .each((index, elm) => {
+          if (index !== menu) {
+            $(elm).removeClass('active');
+          } else {
+            $(elm).addClass('active');
+          }
+        });
+
+        checkButtons();
+    };
+
+    const nextCarousel = () => {
+      $(`.carousel_${currentCarousel - 1}`).addClass('left far');
+      $(`.carousel_${currentCarousel}`).addClass('left');
+      $(`.carousel_${currentCarousel}`).removeClass('active');
+      $(`.carousel_${currentCarousel + 1}`).removeClass('right left');
+      $(`.carousel_${currentCarousel + 2}`).removeClass('far');
+      $(`.carousel_${currentCarousel + 1}`).addClass('active');
+      currentCarousel++;
+      $('.btn-navigate-carousel').toggleClass('fade');
+      setTimeout(() => {
+        $('.btn-navigate-carousel').toggleClass('fade');
+      }, 400);
+    };
+
+    const previousCarousel = () => {
+      $(`.carousel_${currentCarousel + 1}`).addClass('right far');
+      $(`.carousel_${currentCarousel}`).addClass('right');
+      $(`.carousel_${currentCarousel}`).removeClass('active');
+      $(`.carousel_${currentCarousel - 1}`).removeClass('right left');
+      $(`.carousel_${currentCarousel - 2}`).removeClass('far');
+      $(`.carousel_${currentCarousel - 1}`).addClass('active');
+      currentCarousel--;
+
+      $('.btn-navigate-carousel').toggleClass('fade');
+      setTimeout(() => {
+        $('.btn-navigate-carousel').toggleClass('fade');
+      }, 400);
+    };
+
+    const checkButtons = () => {
+      if (currentCarousel < totalCarousels) {
+        setTimeout(() => {
+          $('.next').addClass('active');
+        }, 400)
+      } else if (currentCarousel === totalCarousels) {
+        $('.next').removeClass('active');
+      }
+
+      if (currentCarousel > 1) {
+        setTimeout(() => {
+          $('.previous').addClass('active');
+        }, 400)
+      } else if (currentCarousel === 1) {
+        $('.previous').removeClass('active');
+      }
+    };
+
+    $('.next').click(() => {
+      nextCarousel();
+      checkButtons();
+    });
+
+    $('.previous').click(() => {
+      previousCarousel();
+      checkButtons();
+    });
+
+    $('#menu_1').click(() => {
+      changeMenu(0);
+    });
+
+    $('#menu_2').click(() => {
+      changeMenu(1);
+    });
+
+    $('#menu_3').click(() => {
+      changeMenu(2);
     });
   });
 </script>
