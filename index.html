@@ -65,6 +65,7 @@
     justify-content: space-between;
     margin-left: 50vw;
     margin-right: 10vw;
+    font-size: 12px !important;
   }
 
   .header-image-container {
@@ -92,22 +93,9 @@
     object-fit: fill;
   }
 
-  @media screen and (min-width: 1300px) {
-    .header-logo {
-      width: 120px;
-    }
-  }
-
-  @media screen and (min-width: 1600px) {
-    .header-logo {
-      width: 185px;
-    }
-  }
-
   .header-select {
     background-color: #057bff;
     color: #fff;
-    min-width: 120px;
     font-size: 1.2em;
     padding: 8px 5px;
     font-family: AmilTypeFace-Regular;
@@ -181,6 +169,29 @@
     }
   }
 
+
+  @media screen and (min-width: 1300px) {
+
+    .header-logo {
+      width: 120px;
+    }
+
+    .header-top {
+      font-size: 14px !important;
+    }
+  }
+
+  @media screen and (min-width: 1600px) {
+    .header-logo {
+      width: 150px;
+    }
+
+    .header-top {
+      font-size: 16px !important;
+    }
+  }
+
+
   .container {
     font-size: 12px;
   }
@@ -214,12 +225,53 @@
     margin-left: 50vw;
     padding: 0px;
     max-width: 40vw;
-    min-height: calc(62vw - 160px);
+    min-height: calc(62vw - 54px);
     overflow: hidden;
   }
 
   .section-2 {
     overflow: hidden;
+  }
+
+  .section2-heading {
+    margin-bottom: 25px;
+  }
+
+  .section2-heading .heading {
+    font-size: 5em;
+    color: #4746ff;
+    font-family: AmilTypeFace-Light;
+    font-weight: 200;
+    text-align: center;
+  }
+  .section2-heading p {
+    text-align: center;
+    color: #b4b4b4;
+    font-size: 2.6875em;
+  }
+
+  @media screen and (min-width: 1300px) {
+    .section-1 {
+      min-height: calc(62vw - 86px);
+    }
+
+    .section2-heading {
+    margin-bottom: 45px;
+  }
+  }
+
+  @media screen and (min-width: 1600px) {
+    .section-1 {
+      min-height: calc(62vw - 133px);
+    }
+
+    .section2-heading p {
+      margin-top: 25px;
+    }
+
+    .section2-heading {
+    margin-bottom: 80px;
+  }
   }
 
   .slider-bar {
@@ -312,8 +364,8 @@
 
   .company-person {
     width: 100%;
-    margin-top: 45px;
-    margin-bottom: 105px;
+    margin-top: 25px;
+    margin-bottom: 25px;
   }
 
   .company-person-bar {
@@ -323,7 +375,7 @@
 
   .company-person-options {
     margin: 0px auto 40px;
-    width: 40vw;
+    width: 45vw;
     display: flex;
     font-family: AmilTypeFace-Regular;
     justify-content: space-around;
@@ -341,7 +393,7 @@
   }
 
   .company-person-bar-details {
-    width: 40vw;
+    width: 45vw;
     display: flex;
     height: 6px;
     margin: 0px auto;
@@ -361,12 +413,35 @@
   }
 
   @media screen and (min-width: 1300px) {
+    .company-person {
+      margin-top: 25px;
+      margin-bottom: 45px;
+    }
+
+    .company-person-options {
+      width: 45vw;
+    }
+
+
     .content-wrapper {
       max-width: 1000px;
     }
   }
 
   @media screen and (min-width: 1600px) {
+    .company-person {
+      margin-top: 45px;
+      margin-bottom: 105px;
+    }
+
+    .company-person-bar-details {
+      width: 40vw;
+     }
+
+    .company-person-options {
+      width: 40vw;
+    }
+
     .content-wrapper {
       max-width: 1300px;
     }
@@ -377,23 +452,6 @@
     flex-direction: column;
   }
 
-  .section2-heading {
-    margin-bottom: 80px;
-  }
-
-  .section2-heading .heading {
-    font-size: 5em;
-    color: #4746ff;
-    font-family: AmilTypeFace-Light;
-    font-weight: 200;
-    text-align: center;
-  }
-  .section2-heading p {
-    text-align: center;
-    margin-top: 25px;
-    color: #b4b4b4;
-    font-size: 2.6875em;
-  }
 
   .down-arrows {
     display: flex;
@@ -458,7 +516,6 @@
   }
 
   .carousel-holder {
-    margin: 85px 0px;
     transition: 0.5s;
     display: none;
     transform: translateY(100px);
@@ -504,6 +561,7 @@
   }
 
   #menu-holder {
+    margin: 85px 0px;
     position: relative;
   }
 
@@ -907,7 +965,7 @@
   
                 <div class="carousel right far carousel_3">
                   <div class="carousel_col1">
-                    <h2>Slide 3<br />20 Kids</h2>
+                    <h2>Dental<br />20 Kids</h2>
                     <br />
                     <h3>
                       A partir de R$<br />
@@ -1390,7 +1448,7 @@
         $('.btn-navigate-carousel').toggleClass('fade');
       setTimeout(() => {
         $('.btn-navigate-carousel').toggleClass('fade');
-      }, 400);
+      }, 500);
       }
 
       currentMenu = menu + 1;
