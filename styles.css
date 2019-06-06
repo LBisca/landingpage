@@ -169,14 +169,14 @@ footer {
 }
 .sliders-holder {
   position: relative;
-  min-height: 150px;
+  min-height: 250px;
 }
 @media screen and (min-width: 1300px) {
   .container {
     font-size: 12px;
   }
   .sliders-holder {
-    min-height: 250px;
+    min-height: 350px;
   }
 }
 @media screen and (min-width: 1600px) {
@@ -313,6 +313,11 @@ footer {
   }
 }
 
+.icon svg {
+  width: 11em;
+  height: 10em;
+}
+
 .price {
   font-family: AmilTypeFace-Medium;
   color: #4700ff;
@@ -443,7 +448,7 @@ footer {
 }
 .content-wrapper {
   margin: 0 auto;
-  max-width: 75vw;
+  max-width: 70vw;
 }
 
 .content-wrapper.grid {
