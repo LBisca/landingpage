@@ -25,12 +25,16 @@
     </header>
 
     <div class="header-image-container">
-      <div id="slider" class="header-slider">
-        <div id="slide_0" class="header-image"></div>
-        <div id="slide_1" class="header-image hidden img-2"></div>
-      </div>
-      <div id="header-detail" class="header-detail"></div>
+
+      <img id='header-grafismo' src="./assets/img/grafismo_amil_1.png" alt="Grafismo">
+        <div id="slider" class="header-slider">
+            <div id="slide_0" class="header-image"></div>
+            <div id="slide_1" class="header-image hidden img-2"></div>
+          </div>
+      <!-- <div id="header-detail" class="header-detail"></div> -->
     </div>
+
+
 
     <div class="container">
       <section class="section-1">
@@ -49,8 +53,7 @@
             </p>
           </div>
         </div>
-        <div
-          style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px;"
+        <div class="progress-holder"
         >
           <p class="btn-description green bold">
             Contratação totalmente online
@@ -95,6 +98,9 @@
             <p id="menu_2">Linha Kids</p>
             <div class="carousel-menu-pointer"></div>
             <p id="menu_3">Linha Estética</p>
+            <select class="person-select">
+              <option>1 a 2 pessoas</option>
+            </select>
           </div>
 
           <div id="menu-holder">
@@ -120,12 +126,13 @@
                     <li>Documentação ortodôntica (Básica)</li>
                   </ul>
                   <div style="display: flex; margin: 25px 0px 60px; ">
-                    <button
+                    <a
                       style="margin-right: 25px;"
                       class="btn-subscribe small blue"
+                      href="/produto.html"
                     >
                       Saiba mais
-                    </button>
+                    </a>
 
                     <button class="btn-subscribe small">
                       Contratar
@@ -662,7 +669,7 @@
       </section>
 
       <footer>
-        <div class="content-wrapper">
+        <div class="content-wrapper footer">
           <p class="footer-disclaimer">
             * Oferta válida para propostas realizadas de 06/05/2019 a 31/05/2019
             e implantadas até 15/06/2019. Os clientes elegíveis receberão por
@@ -678,7 +685,7 @@
             horas por dia, 7<br />dias por semana.
           </p>
 
-          <div class="footer-flex">
+          <div class="footer-flex  s-between reduced">
             <p>
               Planos pessoa física<br />
               Planos pequenas e médias empresas
@@ -691,8 +698,27 @@
           </div>
 
           <div
-            style="width: 100%; border-bottom: 1px solid #fff; margin-top: 25px;"
+            style="width: 100%; border-bottom: 1px solid #fff; margin: 25px 0px;"
           ></div>
+
+          <div class="footer-flex s-between">
+            <img style="max-width: 4em" class="footer-icon" src="assets/img/ans.jpg" alt="ans"></img src="assets/img/ans.jpg">
+            <p>
+            Amil Dental CRO SP 4.722/Resp. Téc. Maria A. F. A. Araújo CRO SP 35.448<br>
+            Amil Dental CRO RJ 960/Resp. Téc. Patricia I. C. de Almeida CRO RJ 20.121<br>
+            <br>
+            CNPJ 29.309.127//0116-18 - Todos os direitos reservados.<br>
+            Copyright &copy; 2007-2019, Amil Assistência Médica internacional S/A<br>
+            <br>
+            Rua Arquiteto Olavo Redig de Campos, 105, TorreB, 6º ao 21º andares,<br>
+            Empreendimento EZ Towers, Vila Francisco, São Paulo/SP, CEP:04711-904.<br>
+            <br>
+            Central de atendimento: 3004-1000 
+            </p>
+            <div>            <p>Formas de pagamento</p>
+              <img style="max-width: 15em" class="footer-icon" src="assets/img/payment-methods.jpg" alt="credit-cards"></img src="assets/img/ans.jpg">
+            </div>
+            <img style="max-width: 7em" class="footer-icon" src="assets/img/ans-n.jpg" alt="ans-number"></img src="assets/img/ans.jpg">
         </div>
       </footer>
     </div>
