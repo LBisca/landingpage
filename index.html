@@ -26,7 +26,7 @@
 
     <div class="header-image-container">
 
-      <img id='header-grafismo' src="./assets/img/grafismo_amil_1.png" alt="Grafismo">
+      <img id='header-grafismo' src="./assets/img/grafismo_amil_2-compressed.png" alt="Grafismo">
         <div id="slider" class="header-slider">
             <div id="slide_0" class="header-image"></div>
             <div id="slide_1" class="header-image hidden img-2"></div>
@@ -74,17 +74,20 @@
       <section class="section-2">
         <div class="company-person">
           <div class="company-person-options">
-            <h3 class="active">Para você</h3>
-            <h3>Para sua empresa</h3>
+            <h3 id="optionPerson" class="active">Para você</h3>
+            <h3 id="optionCompany" >Para sua empresa</h3>
           </div>
           <div class="company-person-bar">
-            <div class="company-person-bar-details">
+            <div id="options-detail" class="company-person-bar-details">
               <span class="active"></span>
               <span></span>
             </div>
           </div>
         </div>
         <div class="content-wrapper">
+
+        <div id="section-person" class="promotions active">
+
           <div class="section2-heading">
             <h1 class="heading">Tranquilidade para sua família</h1>
             <p>a um preço que cabe no seu bolso</p>
@@ -92,26 +95,29 @@
 
           <!-- CARROSSEL -->
 
-          <div class="carousel-menu">
+          <div id="person-menu" class="carousel-menu">
             <p id="menu_1" class="active">Linha Clássica</p>
             <div class="carousel-menu-pointer"></div>
             <p id="menu_2">Linha Kids</p>
             <div class="carousel-menu-pointer"></div>
             <p id="menu_3">Linha Estética</p>
-            <select class="person-select">
-              <option>1 a 2 pessoas</option>
+            <select id="person-select" class="person-select">
+              <option value="1">1 a 2 pessoas</option>
+              <option value="2">3 ou mais pessoas</option>
             </select>
           </div>
 
-          <div id="menu-holder">
+          <div id="menu-holder" class="menu-holder">
+
+            <!-- Linha clássica -->
             <div id="carousel-holder_1" class="carousel-holder active">
               <div class="carousel active carousel_1">
                 <div class="carousel_col1">
-                  <h2>Slide 1<br />200</h2>
+                  <h2>Dental<br />200</h2>
                   <br />
-                  <h3>
+                  <h3 id="person-200-classic-price">
                     A partir de R$<br />
-                    34,00/mês
+                    46,50/mês
                   </h3>
                 </div>
                 <div class="carousel_col2">
@@ -126,7 +132,7 @@
                     <li>Documentação ortodôntica (Básica)</li>
                   </ul>
                   <div style="display: flex; margin: 25px 0px 60px; ">
-                    <a
+                    <a id="person-200-classic-link"
                       style="margin-right: 25px;"
                       class="btn-subscribe small blue"
                       href="/produto.html"
@@ -143,31 +149,30 @@
 
               <div class="carousel right carousel_2">
                 <div class="carousel_col1">
-                  <h2>Dental<br />20 Kids</h2>
+                  <h2>Dental<br />50 Regional</h2>
                   <br />
-                  <h3>
-                    A partir de R$<br />
-                    34,00/mês
+                  <h3 id="person-50-classic-price">
+                      A partir de R$ <br/>36,71/mês
                   </h3>
                 </div>
                 <div class="carousel_col2">
                   <ul>
-                    <li>Atendimento Nacional</li>
+                    <li>Atendimento em cidades de (SP, RJ, NE)</li>
                     <li>Consultas e diagnósticos</li>
                     <li>Limpeza e aplicação de flúor</li>
                     <li>Raio-X</li>
                     <li>Restaurações</li>
                     <li>Cirurgias</li>
-                    <li>Tratamento de gengivas e canal</li>
-                    <li>Documentação ortodôntica (Básica)</li>
+                    <li>Tratamento de gengivas e canal</li>               
                   </ul>
                   <div style="display: flex; margin: 25px 0px 60px; ">
-                    <button
+                      <a id="person-50-classic-link"
                       style="margin-right: 25px;"
                       class="btn-subscribe small blue"
+                      href="/produto.html"
                     >
                       Saiba mais
-                    </button>
+                    </a>
 
                     <button class="btn-subscribe small">
                       Contratar
@@ -178,31 +183,31 @@
 
               <div class="carousel right far carousel_3">
                 <div class="carousel_col1">
-                  <h2>Dental<br />20 Kids</h2>
+                  <h2>Dental<br />10 Regional</h2>
                   <br />
-                  <h3>
+                  <h3 id="person-10-classic-price">
                     A partir de R$<br />
-                    34,00/mês
+                    36,71/mês
                   </h3>
                 </div>
                 <div class="carousel_col2">
                   <ul>
-                    <li>Atendimento Nacional</li>
+                    <li>Atendimento em (Campinas e região)</li>
                     <li>Consultas e diagnósticos</li>
                     <li>Limpeza e aplicação de flúor</li>
                     <li>Raio-X</li>
                     <li>Restaurações</li>
                     <li>Cirurgias</li>
                     <li>Tratamento de gengivas e canal</li>
-                    <li>Documentação ortodôntica (Básica)</li>
                   </ul>
                   <div style="display: flex; margin: 25px 0px 60px; ">
-                    <button
+                      <a id="person-10-classic-link"
                       style="margin-right: 25px;"
                       class="btn-subscribe small blue"
+                      href="/produto.html"
                     >
                       Saiba mais
-                    </button>
+                    </a>
 
                     <button class="btn-subscribe small">
                       Contratar
@@ -211,13 +216,12 @@
                 </div>
               </div>
             </div>
-
-            <!-- Menu Diferente -->
-
+            
+            <!-- Linha kids -->
             <div id="carousel-holder_2" class="carousel-holder">
               <div class="carousel active carousel_1">
                 <div class="carousel_col1">
-                  <h2>Slide 2<br />200</h2>
+                  <h2>Dental<br />K20</h2>
                   <br />
                   <h3>
                     A partir de R$<br />
@@ -233,7 +237,10 @@
                     <li>Restaurações</li>
                     <li>Cirurgias</li>
                     <li>Tratamento de gengivas e canal</li>
-                    <li>Documentação ortodôntica (Básica)</li>
+                    <li>Documentação ortodôntica (básica)</li>
+                    <li>Atendimento de urgência em domicilio 24h*<br>
+                        <a target="_blank" href="https://amildentalvenda.custhelp.com/app/answers/detail/a_id/14">* Consulte as condições:</a>
+                      </li>
                   </ul>
                   <div style="display: flex; margin: 25px 0px 60px; ">
                     <button
@@ -248,83 +255,14 @@
                     </button>
                   </div>
                 </div>
-              </div>
-
-              <div class="carousel right carousel_2">
-                <div class="carousel_col1">
-                  <h2>Dental<br />20 Kids</h2>
-                  <br />
-                  <h3>
-                    A partir de R$<br />
-                    34,00/mês
-                  </h3>
-                </div>
-                <div class="carousel_col2">
-                  <ul>
-                    <li>Atendimento Nacional</li>
-                    <li>Consultas e diagnósticos</li>
-                    <li>Limpeza e aplicação de flúor</li>
-                    <li>Raio-X</li>
-                    <li>Restaurações</li>
-                    <li>Cirurgias</li>
-                    <li>Tratamento de gengivas e canal</li>
-                    <li>Documentação ortodôntica (Básica)</li>
-                  </ul>
-                  <div style="display: flex; margin: 25px 0px 60px; ">
-                    <button
-                      style="margin-right: 25px;"
-                      class="btn-subscribe small blue"
-                    >
-                      Saiba mais
-                    </button>
-
-                    <button class="btn-subscribe small">
-                      Contratar
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <div class="carousel right far carousel_3">
-                <div class="carousel_col1">
-                  <h2>Dental<br />20 Kids</h2>
-                  <br />
-                  <h3>
-                    A partir de R$<br />
-                    34,00/mês
-                  </h3>
-                </div>
-                <div class="carousel_col2">
-                  <ul>
-                    <li>Atendimento Nacional</li>
-                    <li>Consultas e diagnósticos</li>
-                    <li>Limpeza e aplicação de flúor</li>
-                    <li>Raio-X</li>
-                    <li>Restaurações</li>
-                    <li>Cirurgias</li>
-                    <li>Tratamento de gengivas e canal</li>
-                    <li>Documentação ortodôntica (Básica)</li>
-                  </ul>
-                  <div style="display: flex; margin: 25px 0px 60px; ">
-                    <button
-                      style="margin-right: 25px;"
-                      class="btn-subscribe small blue"
-                    >
-                      Saiba mais
-                    </button>
-
-                    <button class="btn-subscribe small">
-                      Contratar
-                    </button>
-                  </div>
-                </div>
-              </div>
+              </div>       
             </div>
 
+            <!-- Linha estética -->
             <div id="carousel-holder_3" class="carousel-holder">
               <div class="carousel active carousel_1">
                 <div class="carousel_col1">
-                  <h2>Slide 3<br />200</h2>
+                  <h2>Dental<br />E40 Orto</h2>
                   <br />
                   <h3>
                     A partir de R$<br />
@@ -340,7 +278,9 @@
                     <li>Restaurações</li>
                     <li>Cirurgias</li>
                     <li>Tratamento de gengivas e canal</li>
-                    <li>Documentação ortodôntica (Básica)</li>
+                    <li>Clareamento dental (Gel + moldeira)</li>
+                    <li>Documentação ortodôntica (Completa)</li>
+                    <li>Manutenções ortodônticas</li>
                   </ul>
                   <div style="display: flex; margin: 25px 0px 60px; ">
                     <button
@@ -359,7 +299,7 @@
 
               <div class="carousel right carousel_2">
                 <div class="carousel_col1">
-                  <h2>Dental<br />20 Kids</h2>
+                  <h2>Dental<br />E30 Prótese</h2>
                   <br />
                   <h3>
                     A partir de R$<br />
@@ -368,49 +308,17 @@
                 </div>
                 <div class="carousel_col2">
                   <ul>
-                    <li>Atendimento Nacional</li>
-                    <li>Consultas e diagnósticos</li>
-                    <li>Limpeza e aplicação de flúor</li>
-                    <li>Raio-X</li>
-                    <li>Restaurações</li>
-                    <li>Cirurgias</li>
-                    <li>Tratamento de gengivas e canal</li>
-                    <li>Documentação ortodôntica (Básica)</li>
-                  </ul>
-                  <div style="display: flex; margin: 25px 0px 60px; ">
-                    <button
-                      style="margin-right: 25px;"
-                      class="btn-subscribe small blue"
-                    >
-                      Saiba mais
-                    </button>
-
-                    <button class="btn-subscribe small">
-                      Contratar
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <div class="carousel right far carousel_3">
-                <div class="carousel_col1">
-                  <h2>Dental<br />20 Kids</h2>
-                  <br />
-                  <h3>
-                    A partir de R$<br />
-                    34,00/mês
-                  </h3>
-                </div>
-                <div class="carousel_col2">
-                  <ul>
-                    <li>Atendimento Nacional</li>
-                    <li>Consultas e diagnósticos</li>
-                    <li>Limpeza e aplicação de flúor</li>
-                    <li>Raio-X</li>
-                    <li>Restaurações</li>
-                    <li>Cirurgias</li>
-                    <li>Tratamento de gengivas e canal</li>
-                    <li>Documentação ortodôntica (Básica)</li>
+                      <li>Atendimento Nacional</li>
+                      <li>Consultas e diagnósticos</li>
+                      <li>Limpeza e aplicação de flúor</li>
+                      <li>Raio-X</li>
+                      <li>Restaurações</li>
+                      <li>Cirurgias</li>
+                      <li>Tratamento de gengivas e canal</li>
+                      <li>Clareamento dental (Gel + moldeira)</li>
+                      <li>Próteses (exceto flexíveis)</li>
+                      <li>Coroas Unitárias em Resina (Completa)</li>
+                      <li>Placa de ATM ou Bruxismo</li>
                   </ul>
                   <div style="display: flex; margin: 25px 0px 60px; ">
                     <button
@@ -467,7 +375,7 @@
               </svg>
             </div>
 
-            <div class="btn-navigate-carousel previous">
+            <div class="btn-navigate-carousel previous left">
               <svg viewBox="0 0 41.065 72.231">
                 <g
                   id="Repeat_Grid_3"
@@ -506,6 +414,297 @@
               </svg>
             </div>
           </div>
+
+        </div>
+
+        <div id="section-company" class="promotions">
+
+            <div class="section2-heading">
+                <h1 class="heading">Qualidade para sua empresa</h1>
+                <p>a um preço que cabe no seu bolso</p>
+              </div>
+
+            <div id="company-menu" class="carousel-menu">
+                <p id="company-menu_1" class="active">Linha Clássica</p>
+                <div class="carousel-menu-pointer"></div>
+                <p id="company-menu_2">Linha Estética</p>
+                <select class="person-select">
+                  <option>De 2 a 29 pessoas</option>
+                  <option>30 a 99 pessoas</option>
+                </select>
+              </div>
+    
+              <div id="company-menu-holder" class="menu-holder">
+
+                <!-- Linha clássica -->
+                <div id="company-carousel-holder_1" class="carousel-holder active">
+                      <div class="carousel active company-carousel_1">
+                        <div class="carousel_col1">
+                          <h2>Dental<br />200</h2>
+                          <br />
+                          <h3>
+                            A partir de R$<br />
+                            34,00/mês
+                          </h3>
+                        </div>
+                        <div class="carousel_col2">
+                          <ul>
+                            <li>Atendimento Nacional</li>
+                            <li>Consultas e diagnósticos</li>
+                            <li>Limpeza e aplicação de flúor</li>
+                            <li>Raio-X</li>
+                            <li>Restaurações</li>
+                            <li>Cirurgias</li>
+                            <li>Tratamento de gengivas e canal</li>
+                            <li>Documentação ortodôntica (Básica)</li>
+                          </ul>
+                          <div style="display: flex; margin: 25px 0px 60px; ">
+                            <a
+                              style="margin-right: 25px;"
+                              class="btn-subscribe small blue"
+                              href="/produto.html"
+                            >
+                              Saiba mais
+                            </a>
+        
+                            <button class="btn-subscribe small">
+                              Contratar
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+        
+
+                      <div class="carousel right company-carousel_2">
+                        <div class="carousel_col1">
+                          <h2>Dental<br />50 Regional</h2>
+                          <br />
+                          <h3>
+                            A partir de R$<br />
+                            27,60/mês
+                          </h3>
+                        </div>
+                        <div class="carousel_col2">
+                          <ul>
+                            <li>Atendimento em cidades de (SP, RJ, NE)</li>
+                            <li>Consultas e diagnósticos</li>
+                            <li>Limpeza e aplicação de flúor</li>
+                            <li>Raio-X</li>
+                            <li>Restaurações</li>
+                            <li>Cirurgias</li>
+                            <li>Tratamento de gengivas e canal</li>               
+                          </ul>
+                          <div style="display: flex; margin: 25px 0px 60px; ">
+                            <button
+                              style="margin-right: 25px;"
+                              class="btn-subscribe small blue"
+                            >
+                              Saiba mais
+                            </button>
+        
+                            <button class="btn-subscribe small">
+                              Contratar
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+        
+                      <div class="carousel right far company-carousel_3">
+                        <div class="carousel_col1">
+                          <h2>Dental<br />10 Regional</h2>
+                          <br />
+                          <h3>
+                            A partir de R$<br />
+                            29,90/mês
+                          </h3>
+                        </div>
+                        <div class="carousel_col2">
+                          <ul>
+                            <li>Atendimento em (Campinas e região)</li>
+                            <li>Consultas e diagnósticos</li>
+                            <li>Limpeza e aplicação de flúor</li>
+                            <li>Raio-X</li>
+                            <li>Restaurações</li>
+                            <li>Cirurgias</li>
+                            <li>Tratamento de gengivas e canal</li>
+                          </ul>
+                          <div style="display: flex; margin: 25px 0px 60px; ">
+                            <button
+                              style="margin-right: 25px;"
+                              class="btn-subscribe small blue"
+                            >
+                              Saiba mais
+                            </button>
+        
+                            <button class="btn-subscribe small">
+                              Contratar
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+        
+                <!-- Linha estética -->
+                <div id="company-carousel-holder_2" class="carousel-holder">
+
+                  <div class="carousel active company-carousel_1">
+                      <div class="carousel_col1">
+                          <h2>Dental<br />E40 Orto</h2>
+                          <br />
+                          <h3>
+                            A partir de R$<br />
+                            34,00/mês
+                          </h3>
+                        </div>
+                        <div class="carousel_col2">
+                          <ul>
+                            <li>Atendimento Nacional</li>
+                            <li>Consultas e diagnósticos</li>
+                            <li>Limpeza e aplicação de flúor</li>
+                            <li>Raio-X</li>
+                            <li>Restaurações</li>
+                            <li>Cirurgias</li>
+                            <li>Tratamento de gengivas e canal</li>
+                            <li>Clareamento dental (Gel + moldeira)</li>
+                            <li>Documentação ortodôntica (Completa)</li>
+                            <li>Manutenções ortodônticas</li>
+                          </ul>
+                          <div style="display: flex; margin: 25px 0px 60px; ">
+                        <button
+                          style="margin-right: 25px;"
+                          class="btn-subscribe small blue"
+                        >
+                          Saiba mais
+                        </button>
+    
+                        <button class="btn-subscribe small">
+                          Contratar
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <div class="carousel right company-carousel_2">
+                      <div class="carousel_col1">
+                          <h2>Dental<br />E30 Prótese</h2>
+                          <br />
+                          <h3>
+                            A partir de R$<br />
+                            34,00/mês
+                          </h3>
+                        </div>
+                        <div class="carousel_col2">
+                          <ul>
+                              <li>Atendimento Nacional</li>
+                              <li>Consultas e diagnósticos</li>
+                              <li>Limpeza e aplicação de flúor</li>
+                              <li>Raio-X</li>
+                              <li>Restaurações</li>
+                              <li>Cirurgias</li>
+                              <li>Tratamento de gengivas e canal</li>
+                              <li>Clareamento dental (Gel + moldeira)</li>
+                              <li>Próteses (exceto flexíveis)</li>
+                              <li>Coroas Unitárias em Resina (Completa)</li>
+                              <li>Placa de ATM ou Bruxismo</li>
+                          </ul>
+                          <div style="display: flex; margin: 25px 0px 60px; ">
+                        <button
+                          style="margin-right: 25px;"
+                          class="btn-subscribe small blue"
+                        >
+                          Saiba mais
+                        </button>
+    
+                        <button class="btn-subscribe small">
+                          Contratar
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+  
+                </div>
+    
+                <div class="btn-navigate-carousel company-next active">
+                  <svg viewBox="0 0 41.065 72.231">
+                    <g
+                      id="Repeat_Grid_3"
+                      data-name="Repeat Grid 3"
+                      clip-path="url(#clip-path)"
+                    >
+                      <g
+                        id="Group_72"
+                        data-name="Group 72"
+                        transform="translate(-1733.55 -1812.55)"
+                      >
+                        <line
+                          id="Line_14"
+                          data-name="Line 14"
+                          x2="31.166"
+                          y2="31.166"
+                          transform="translate(1738.5 1817.5)"
+                          fill="none"
+                          stroke="#fff"
+                          stroke-linecap="round"
+                          stroke-width="7"
+                        />
+                        <line
+                          id="Line_15"
+                          data-name="Line 15"
+                          y1="31.166"
+                          x2="31.166"
+                          transform="translate(1738.5 1848.666)"
+                          fill="none"
+                          stroke="#fff"
+                          stroke-linecap="round"
+                          stroke-width="7"
+                        />
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+    
+                <div class="btn-navigate-carousel company-previous left">
+                  <svg viewBox="0 0 41.065 72.231">
+                    <g
+                      id="Repeat_Grid_3"
+                      data-name="Repeat Grid 3"
+                      clip-path="url(#clip-path)"
+                    >
+                      <g
+                        id="Group_72"
+                        data-name="Group 72"
+                        transform="translate(-1733.55 -1812.55)"
+                      >
+                        <line
+                          id="Line_14"
+                          data-name="Line 14"
+                          x2="31.166"
+                          y2="31.166"
+                          transform="translate(1738.5 1817.5)"
+                          fill="none"
+                          stroke="#fff"
+                          stroke-linecap="round"
+                          stroke-width="7"
+                        />
+                        <line
+                          id="Line_15"
+                          data-name="Line 15"
+                          y1="31.166"
+                          x2="31.166"
+                          transform="translate(1738.5 1848.666)"
+                          fill="none"
+                          stroke="#fff"
+                          stroke-linecap="round"
+                          stroke-width="7"
+                        />
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+
+
+            </div>
+        </div>
 
           <!-- Carrossel end -->
 

@@ -81,6 +81,7 @@ footer {
   align-items: center;
   left: -15vw;
   top: 2vw;
+  background-color: #4700ff;
   /* background: url(/assets/img/grafismo_amil_1.png); */
   width: 70vw;
   height: 70vw;
@@ -107,13 +108,29 @@ footer {
   object-fit: fill;
 }
 .header-select {
-  background-color: #057bff;
-  color: #fff;
   font-size: 1.2em;
+  position: relative;
   height: 2em;
-  font-family: AmilTypeFace-Regular;
+  font-family: AmilTypeFace-Bold;
+  display: block;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+  padding-left: 0.5em;
+  padding-right: 1.65em;
+  max-width: 100%;
+  margin-left: 15px;
+  box-sizing: border-box;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #057bff;
+  background-image: url('/assets/img/arrow-select.svg');
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 0.65em auto, 100%;
 }
 .header-info {
   font-size: 1em;
@@ -122,10 +139,13 @@ footer {
   text-align: right;
 }
 .header-image {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  perspective: 1000px;
+  transform: scaleY(1) scaleX(1);
   position: absolute;
   width: 100%;
   height: 100%;
-  transform: scale(1);
   opacity: 1;
   background: url(./assets/img/imagem_topo_mae_2.jpg);
   background-repeat: no-repeat;
@@ -136,7 +156,6 @@ footer {
     transform 0.6s ease-in-out;
   -ms-transition: -ms-transform 0.6s ease-in-out, transform 0.6s ease-in-out;
   transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
-  will-change: transform;
 }
 .header-image.img-2 {
   background: url(./assets/img/imagem_topo_mae.jpg);
@@ -144,28 +163,30 @@ footer {
   background-position: center;
 }
 .header-image.hidden {
+  transform: scaleY(0.8) scaleX(0.8);
   opacity: 0;
-  transform: scale(0.8);
 }
 
 #header-grafismo {
-  transform: rotate(0deg);
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
+  transform: rotateZ(0deg);
 }
 
 #header-grafismo.rotate {
   -webkit-transition: -webkit-transform 800ms;
   -ms-transition: -ms-transform 800ms;
   transition: transform 800ms;
-  -webkit-transform: rotate(360deg);
-  transform: rotate(360deg);
-  will-change: transform;
+  -webkit-transform: rotateZ(360deg);
+  transform: rotateZ(360deg);
 }
 @media screen and (min-width: 520px) {
   .header-image-container {
     width: 70vw;
     height: 70vw;
     left: -25vw;
-    top: -9vw;
+    top: -8vw;
   }
   .header-detail {
     border-bottom: 7vw solid rgba(45, 186, 255, 0.9);
@@ -494,8 +515,10 @@ footer {
   background: #00d896;
 }
 .content-wrapper {
+  position: relative;
   margin: 0 auto;
-  max-width: 70vw;
+  width: 75vw;
+  max-width: 1440px;
 }
 
 .content-wrapper.grid {
@@ -620,7 +643,7 @@ footer {
 }
 .carousel-menu {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   text-align: center;
   align-items: center;
   font-family: AmilTypeFace-Medium;
@@ -640,7 +663,7 @@ footer {
   background-color: #d6d6d6;
   border-radius: 50%;
 }
-#menu-holder {
+.menu-holder {
   margin: 4em 0;
   position: relative;
 }
@@ -730,7 +753,7 @@ footer {
 .btn-navigate-carousel.active {
   visibility: visible;
 }
-.btn-navigate-carousel.previous {
+.btn-navigate-carousel.left {
   left: -6.85em;
   transform: rotate(180deg);
 }
@@ -744,11 +767,51 @@ footer {
 }
 
 .person-select {
-  border: 2px solid #707070;
+  position: relative;
+  height: 2em;
+  display: block;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+  padding-left: 0.5em;
+  padding-right: 1.5em;
+  max-width: 100%;
+  margin-left: 15px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-image: url('/assets/img/arrow-select-blue.svg');
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 0.65em auto, 100%;
+  border: 1px solid #707070;
   border-radius: 30px;
   font-family: AmilTypeFace-Medium;
   color: #00adff;
   font-size: 2.25em;
+}
+
+.promotions {
+  will-change: transform, opacity;
+  position: absolute;
+  transform: translateY(25%);
+  transition: transform 0.4s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.promotions.active {
+  position: relative;
+  transform: translateY(0px);
+  opacity: 1;
+  visibility: visible;
+}
+
+#options-detail span {
+  transition: 0.3s;
 }
 
 /* Produto */
