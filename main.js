@@ -145,12 +145,17 @@ $(document).ready(function() {
     console.log(e.target.value);
     if (e.target.value === '1') {
       $('#person-200-classic-price').html('A partir de R$ <br/>46,50/mês');
+
       $('#person-50-classic-price').html('A partir de R$ <br/>36,71/mês');
     } else if (e.target.value === '2') {
-      $('#person-50-classic-price').html('A partir de R$ <br/>27,60/mês');
       $('#person-200-classic-price').html('A partir de R$ <br/>34,00/mês');
+
+      $('#person-50-classic-price').html('A partir de R$ <br/>27,60/mês');
     }
   });
+
+  // $('#company-200-classic-price').html('A partir de R$ <br/>27,00/mês');
+  // $('#company-200-classic-price').html('A partir de R$ <br/>23,00/mês');
 
   $('#optionCompany').click(() => {
     $('#optionCompany').addClass('active');
