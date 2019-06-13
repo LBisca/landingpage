@@ -597,6 +597,11 @@ footer {
   transform: translateX(100%);
 }
 
+.grid-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
 @media screen and (min-width: 325px) {
   .content-wrapper {
     padding: 0px 25px;
