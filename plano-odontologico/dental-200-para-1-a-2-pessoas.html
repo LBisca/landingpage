@@ -27,7 +27,7 @@
         <div class="header-image-container">
     
           <img id='header-grafismo' src="../assets/img/grafismo_amil_2-compressed.png" alt="Grafismo">
-            <div id="slider" class="header-slider">
+            <div  class="header-slider">
                 <div id="slide_0" class="header-image"></div>
                 <div id="slide_1" class="header-image hidden img-2"></div>
               </div>
@@ -77,13 +77,38 @@
         <div class="content-wrapper">
           <div class="produto-description big-margin">
             <h3>Procedimentos extras</h3>
-            <p class="big-margin">
+            <p class="vantagens big-margin">
               além do rol da ANS (Agencia Nacional de<br> Saúde Suplementar),
               incluindo documentação<br> ortodôntica básica e instalação do aparelho
               fixo
             </p>
 
-            <a class="vantagens">Ver todas as vantagens</a>
+            <div id="vantagens-extra" class="vantagens-hidden">
+              <p class="vantagens big-margin">
+                Contratação totalmente online, rápida e sem burocracia
+              </p>
+              <p class="vantagens big-margin">
+                Mais de 41 mil opções de atendimento em todo o Brasil
+              </p>
+              <p class="vantagens big-margin">
+                Teleatendimento 24 horas por dia
+              </p>
+              <p class="vantagens big-margin">
+                Autorização imediata dos tratamentos cobertos
+              </p>
+              <p class="vantagens big-margin">
+                Clínicas de urgência 24 horas
+              </p>
+              <p class="vantagens big-margin">
+                Carteirinha Virtual              
+              </p>
+              <p class="vantagens big-margin">
+                As melhores condições de pagamento! Você escolhe como quer pagar:<br>
+                Boleto anual ou Cartão de crédito em até 12 parcelas,<br> com carência de apenas 24h ou ainda, através de boleto mensal.              </p>
+     
+            </div>
+
+            <div id="vantagens-btn" class="vantagens-btn">Ver todas as vantagens</div>
           </div>
         </div>
 
@@ -94,11 +119,11 @@
                   <h3>Cobertura e carência</h3>
                 </div>
               <div class="company-person-options">
-                <h3 class="active">Cobertura</h3>
-                <h3>Carência</h3>
+                <h3 id="cobertura" class="active">Cobertura</h3>
+                <h3 id="carencia">Carência</h3>
               </div>
               <div class="company-person-bar">
-                <div class="company-person-bar-details">
+                <div id="details" class="company-person-bar-details">
                   <span class="active"></span>
                   <span></span>
                 </div>
@@ -107,9 +132,9 @@
          
 
           
-          <div class="content-wrapper grid">
+          <div id="content-grid_1" class="content-wrapper grid">
               <div class="produto-description">
-                <p>
+                <p class="vantagens">
                     O plano Amil Dental 200 Doc oferece cobertura integral<br> para todos os procedimentos do Rol ANS (Agência<br> Nacional de Saúde Suplementar) e mais procedimentos<br> extras, nas seguintes especialidades:
                 </p>
             </div>
@@ -127,52 +152,158 @@
                 </div>
   
                 <div class="block-item">
-                    <h4>Limpeza, prevenção<br> e aplicação de flúor<br>(profilaxia)
+                    <h4>Limpeza, prevenção<br>
+                      e aplicação de flúor<br>
                       </h4>
+                      <span>(profilaxia)</span> 
                 </div>
               </div>
+
               <div class="itens-row itens-3">
                   <div class="block-item">
                     <h4>Raios X<br>
-                      (panorâmicos e periapicais)
-                      </h4>
+                  </h4>
+                      <span> (panorâmicos e periapicais)</span>
                   </div>
     
                   <div class="block-item">
-                      <h4>Clareamento 
-                          dentário convencional
+                      <h4>Tratamento de gengiva
                         </h4>
+                        <span>(periodontia)</span>
                   </div>
     
                   <div class="block-item">
-                      <h4>Rol ANS ampliado
+                      <h4>Tratamento para crianças 
                         </h4>
+                        <span>(odontopediatria)</span>
                   </div>
-                </div>
+              </div>
     
   
-              <div class="itens-row itens-2">
-                <div></div>
-  
+              <div class="itens-row itens-3">
                   <div class="block-item">
-                      <h4>Manutenções ortodônticas
+                      <h4>Restaurações 
                         </h4>
-                    </div>
+                        <span>(dentística)</span>
+                  </div>
       
                     <div class="block-item">
-                        <h4>Clareamento 
-                            dentário convencional
+                        <h4>Cirurgias e extrações 
                           </h4>
+                          <span>(incluindo o dente do siso/incluso)</span>
+                    </div>
+
+                    <div class="block-item">
+                      <h4>Tratamento de canal 
+                        </h4>
+                        <span>(endodontia)</span>
                     </div>
               </div>
 
-
+              <div class="itens-row itens-2">
+                <div></div>
+  
+                <div class="block-item">
+                  <h4>Próteses
+                    </h4>
+                    <span>(conforme Rol de Procedimentos vigentes na ANS)</span>
+                </div>
+  
+                    <div class="block-item">
+                      <h4>Ortodontia 
+                        </h4>
+                        <span>(instalação de aparelho e doc. ortodôntica básica)</span>
+                  </div>
+              </div>
             </div>
-
-
           </div>
 
+          <div id="content-grid_2" class="content-wrapper grid hidden right">
+            <div class="produto-description">
+              <p class="vantagens">
+                  Carência Amil Dental 200 Doc oferece cobertura integral<br> para todos os procedimentos do Rol ANS (Agência<br> Nacional de Saúde Suplementar) e mais procedimentos<br> extras, nas seguintes especialidades:
+              </p>
+          </div>
 
+          <div class="itens-holder">
+            <div class="itens-row itens-3">
+              <div class="block-item">
+                <h4>Urgência/Emergência
+                  </h4>
+              </div>
+
+              <div class="block-item">
+                  <h4>Consultas
+                    </h4>
+              </div>
+
+              <div class="block-item">
+                  <h4>Limpeza, prevenção<br>
+                    e aplicação de flúor<br>
+                    </h4>
+                    <span>(profilaxia)</span> 
+              </div>
+            </div>
+
+            <div class="itens-row itens-3">
+                <div class="block-item">
+                  <h4>Raios X<br>
+                </h4>
+                    <span> (panorâmicos e periapicais)</span>
+                </div>
+  
+                <div class="block-item">
+                    <h4>Tratamento de gengiva
+                      </h4>
+                      <span>(periodontia)</span>
+                </div>
+  
+                <div class="block-item">
+                    <h4>Tratamento para crianças 
+                      </h4>
+                      <span>(odontopediatria)</span>
+                </div>
+            </div>
+  
+
+            <div class="itens-row itens-3">
+                <div class="block-item">
+                    <h4>Restaurações 
+                      </h4>
+                      <span>(dentística)</span>
+                </div>
+    
+                  <div class="block-item">
+                      <h4>Cirurgias e extrações 
+                        </h4>
+                        <span>(incluindo o dente do siso/incluso)</span>
+                  </div>
+
+                  <div class="block-item">
+                    <h4>Tratamento de canal 
+                      </h4>
+                      <span>(endodontia)</span>
+                  </div>
+            </div>
+
+            <div class="itens-row itens-2">
+              <div></div>
+
+              <div class="block-item">
+                <h4>Próteses
+                  </h4>
+                  <span>(conforme Rol de Procedimentos vigentes na ANS)</span>
+              </div>
+
+                  <div class="block-item">
+                    <h4>Ortodontia 
+                      </h4>
+                      <span>(instalação de aparelho e doc. ortodôntica básica)</span>
+                </div>
+            </div>
+          </div>
+        </div>
+        
       </section>
         
         <div class="content-wrapper">
@@ -184,13 +315,13 @@
 
           <div class="produto-description big-margin">
             
-              <p class="big-margin">
+              <p class="vantagens big-margin">
                   Mais de 41 mil opções de atendimento em todo o Brasil e<br> você pode utilizar seu plano em qualquer região,<br> independente da região onde tenha realizado a contratação.<br>
                   <br>
                   A rede credenciada é criteriosamente selecionada e<br> constantemente atualizada.
               </p>
   
-              <a class="vantagens">Consultar redes</a>
+              <div class="vantagens-btn">Consultar redes</div>
          
           </div>
 
@@ -353,8 +484,7 @@
           </div>
         </div>
       </section>
-    </div>
-
+    
 
     <footer>
         <div class="content-wrapper footer">
@@ -411,5 +541,38 @@
       </footer>
     </div>
     </div>
+    </div>
   </body>
 </html>
+
+<script>
+  $('#vantagens-btn').click(() => {
+    $('#vantagens-extra').toggleClass('vantagens-hidden');
+  });
+
+  const detailSpans = document.getElementById('details')
+
+  $('#carencia').click(() => {
+    $('#cobertura').removeClass('active')
+    detailSpans.children[0].classList.remove('active')
+    $('#content-grid_1').addClass('left');
+    $('#content-grid_1').addClass('hidden');
+    $('#carencia').addClass('active')
+    detailSpans.children[1].classList.add('active')
+    $('#content-grid_2').removeClass('right');
+    $('#content-grid_2').removeClass('hidden');
+
+  })
+
+  $('#cobertura').click(() => {
+    $('#carencia').removeClass('active')
+    detailSpans.children[1].classList.remove('active')
+    $('#content-grid_2').addClass('hidden');
+    $('#content-grid_2').addClass('right');
+    $('#cobertura').addClass('active');
+    detailSpans.children[0].classList.add('active')
+    $('#content-grid_1').removeClass('left');
+    $('#content-grid_1').removeClass('hidden');
+  })
+
+</script>

@@ -173,9 +173,25 @@ $(document).ready(function() {
   $('#company-select').change(e => {
     if (e.target.value === '1') {
       $('#company-200-classic-price').html('A partir de R$ <br/>27,00/mês');
+      $('#company-200-classic-link').attr(
+        'href',
+        '/plano-odontologico/dental-200-company-2-29.html'
+      );
       $('#company-50-classic-price').html('A partir de R$ <br/>20,90/mês');
+      $('#company-50-classic-link').attr(
+        'href',
+        '/plano-odontologico/dental-50-company-2-29.html'
+      );
     } else if (e.target.value === '2') {
       $('#company-200-classic-price').html('A partir de R$ <br/>23,00/mês');
+      $('#company-200-classic-link').attr(
+        'href',
+        '/plano-odontologico/dental-200-company-30-99.html'
+      );
+      $('#company-50-classic-link').attr(
+        'href',
+        '/plano-odontologico/dental-50-company-30-99.html'
+      );
       $('#company-50-classic-price').html('A partir de R$ <br/>17,90/mês');
     }
   });
