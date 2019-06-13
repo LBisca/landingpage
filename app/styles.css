@@ -4,7 +4,7 @@
 }
 @font-face {
   font-family: AmilTypeFace-Regular;
-  src: url(app/assets/fonts/AmilTypeFace-Regular_WebOnly.woff);
+  src: url('app/assets/fonts/AmilTypeface-Bold_WebOnly.woff') format('woff');
 }
 @font-face {
   font-family: AmilTypeFace-Medium;
