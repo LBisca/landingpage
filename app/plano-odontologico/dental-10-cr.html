@@ -116,11 +116,11 @@
                   <h3>Cobertura e carência</h3>
                 </div>
               <div class="company-person-options">
-                <h3 class="active">Cobertura</h3>
-                <h3>Carência</h3>
+                <h3 id="cobertura" class="active">Cobertura</h3>
+                <h3 id="carencia">Carência</h3>
               </div>
               <div class="company-person-bar">
-                <div class="company-person-bar-details">
+                <div id="details" class="company-person-bar-details">
                   <span class="active"></span>
                   <span></span>
                 </div>
@@ -128,11 +128,82 @@
             </div>
          
 
-          
-          <div class="content-wrapper grid">
+          <div class="grid-wrapper">
+          <div id="content-grid_1" class="content-wrapper grid">
               <div class="produto-description">
                 <p class="vantagens">
-                  O Plano Next Dental oferece cobertura integralM<br> para o rol de procedimentos da ANS <br> (Agência Nacional de Saúde Suplementar):
+                  O Plano Dental 10 CR oferece cobertura integral<br> para o rol de procedimentos da ANS (Agência Nacional de Saúde Suplementar):
+                </p>
+            </div>
+
+            <div class="itens-holder">
+              <div class="itens-row itens-3">
+                <div class="block-item">
+                  <h4>Urgência/Emergência
+                    </h4>
+                </div>
+  
+                <div class="block-item">
+                    <h4>Consultas
+                      </h4>
+                </div>
+  
+                <div class="block-item">
+                    <h4>Limpeza, prevenção<br>
+                      e aplicação de flúor<br>
+                      </h4>
+                      <span>(profilaxia)</span> 
+                </div>
+              </div>
+
+              <div class="itens-row itens-3">
+                  <div class="block-item">
+                    <h4>Raios X<br>
+                  </h4>
+                      <span> (panorâmicos e periapicais)</span>
+                  </div>
+    
+                  <div class="block-item">
+                      <h4>Tratamento de gengiva
+                        </h4>
+                        <span>(periodontia)</span>
+                  </div>
+    
+                  <div class="block-item">
+                      <h4>Tratamento para crianças 
+                        </h4>
+                        <span>(odontopediatria)</span>
+                  </div>
+              </div>
+    
+  
+              <div class="itens-row itens-3">
+                  <div class="block-item">
+                      <h4>Restaurações 
+                        </h4>
+                        <span>(dentística)</span>
+                  </div>
+      
+                    <div class="block-item">
+                        <h4>Cirurgias e extrações 
+                          </h4>
+                          <span>(incluindo o dente do siso/incluso)</span>
+                    </div>
+
+                    <div class="block-item">
+                      <h4>Tratamento de canal 
+                        </h4>
+                        <span>(endodontia)</span>
+                    </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="content-grid_2" class="content-wrapper grid">
+              <div class="produto-description">
+                <p class="vantagens">
+                    Conforme quadro abaixo, são aplicadas as carências, efetuando o pagamento<br> de seu plano através do boleto mensal ou boleto anual ou de seu cartão de crédito.
                 </p>
             </div>
 
@@ -201,6 +272,7 @@
           </div>
 
 
+        </div>
       </section>
         
         <div class="content-wrapper">
@@ -213,7 +285,7 @@
           <div class="produto-description big-margin">
             
               <p class="vantagens big-margin">
-                O produto Next Dental possui ampla rede<br> de atendimento criteriosamente selecionada.<br> Consulte a rede disponível de acordo com<br> a região do plano contratado.
+                  O produto Dental 10 CR possui rede de atendimento criteriosamente<br> selecionada. Consulte a rede disponível de acordo com a região do plano contratado.
               </p>
   
               <div class="vantagens-btn">Consultar redes</div>
@@ -445,4 +517,29 @@
   $('#vantagens-btn').click(() => {
     $('#vantagens-extra').toggleClass('vantagens-hidden');
   });
+
+  const detailSpans = document.getElementById('details')
+
+$('#carencia').click(() => {
+  $('#cobertura').removeClass('active')
+  detailSpans.children[0].classList.remove('active')
+  $('#content-grid_1').addClass('left');
+  $('#content-grid_1').addClass('hidden');
+  $('#carencia').addClass('active')
+  detailSpans.children[1].classList.add('active')
+  $('#content-grid_2').removeClass('right');
+  $('#content-grid_2').removeClass('hidden');
+})
+
+$('#cobertura').click(() => {
+  $('#carencia').removeClass('active')
+  detailSpans.children[1].classList.remove('active')
+  $('#content-grid_2').addClass('hidden');
+  $('#content-grid_2').addClass('right');
+  $('#cobertura').addClass('active');
+  detailSpans.children[0].classList.add('active')
+  $('#content-grid_1').removeClass('left');
+  $('#content-grid_1').removeClass('hidden');
+})
+  
 </script>
