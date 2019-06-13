@@ -1,6 +1,6 @@
 @font-face {
   font-family: AmilTypeFace-Light;
-  src: url(assets/fonts/AmilTypeface-Light_WebOnly.woff);
+  src: url('assets/fonts/AmilTypeface-Bold_WebOnly.woff') format('woff');
 }
 @font-face {
   font-family: AmilTypeFace-Regular;
@@ -8,12 +8,11 @@
 }
 @font-face {
   font-family: AmilTypeFace-Medium;
-  src: url('/assets/fonts/AmilTypeface-Medium_WebOnly.woff') format('woff');
+  src: url('assets/fonts/AmilTypeface-Medium_WebOnly.woff') format('woff');
 }
 @font-face {
   font-family: AmilTypeFace-Bold;
-  src: url(app/assets/fonts/AmilTypeFace-Bold_WebOnly.woff);
-}
+  src: url('assets/fonts/AmilTypeface-Bold_WebOnly.woff') format('woff');
 * {
   padding: 0;
   margin: 0;
