@@ -1,18 +1,18 @@
 @font-face {
   font-family: AmilTypeFace-Light;
-  src: url(fonts/AmilTypeFace-Light_WebOnly.woff);
+  src: url(assets/fonts/AmilTypeFace-Light_WebOnly.woff);
 }
 @font-face {
   font-family: AmilTypeFace-Regular;
-  src: url(fonts/AmilTypeFace-Regular_WebOnly.woff);
+  src: url(assets/fonts/AmilTypeFace-Regular_WebOnly.woff);
 }
 @font-face {
   font-family: AmilTypeFace-Medium;
-  src: url(fonts/AmilTypeFace-Medium_WebOnly.woff);
+  src: url(assets/fonts/AmilTypeFace-Medium_WebOnly.woff);
 }
 @font-face {
   font-family: AmilTypeFace-Bold;
-  src: url(fonts/AmilTypeFace-Bold_WebOnly.woff);
+  src: url(assets/fonts/AmilTypeFace-Bold_WebOnly.woff);
 }
 
 * {
