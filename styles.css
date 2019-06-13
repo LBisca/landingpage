@@ -1,6 +1,6 @@
 @font-face {
   font-family: AmilTypeFace-Light;
-  src: url(assets/fonts/AmilTypeFace-Light_WebOnly.woff);
+  src: url(font-url('assets/fonts/AmilTypeFace-Light_WebOnly.woff') format('woff');
 }
 @font-face {
   font-family: AmilTypeFace-Regular;
@@ -12,7 +12,7 @@
 }
 @font-face {
   font-family: AmilTypeFace-Bold;
-  src: url(assets/fonts/AmilTypeFace-Bold_WebOnly.woff);
+  src: url(fonts/AmilTypeFace-Bold_WebOnly.woff);
 }
 
 * {
