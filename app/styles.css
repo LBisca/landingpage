@@ -258,6 +258,7 @@ footer {
 .sliders-holder {
   position: relative;
   min-height: 25em;
+  padding: 25px 0px;
 }
 
 @media screen and (min-width: 720px) {
@@ -266,6 +267,7 @@ footer {
   }
 
   .sliders-holder {
+    padding: 40px 0px;
     position: relative;
     min-height: 30em;
   }
@@ -1056,7 +1058,7 @@ footer {
 #options-detail span {
   transition: 0.3s;
 }
-
+º
 /* Produto */
 .backline {
   margin: 25px 0px;
